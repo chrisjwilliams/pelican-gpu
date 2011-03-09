@@ -26,8 +26,8 @@ class CudaDataBlob: public DataBlob {
         void *inputBuffer, *outputBuffer;
 
 };
-}
-}
+} // naemspace gpu
+} // naemspace pelican
 
 #endif
 
