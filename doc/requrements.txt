@@ -1,0 +1,12 @@
+Use of GPUs
+===========
+
+- Must be able to assign GPU resources to modules via the configuration file
+  - Modules can be assigned fixed resources
+- Modules inside a pipeline must be able to write to and fetch from GPU memory
+  only those GPU's to which it has been assigned access to.
+- Assignment can be dynamic and may change depending on computational requirements.
+- Provision shall be made to allow copying the same memory to multiple GPU's
+- The design shall not restrict the ability of algorithms that require its
+  assigned GPU's to talk to each other directly, without passing through CPU memory.
+- Both CUDA and openCL shall be supported, with a common api for all functionality.
