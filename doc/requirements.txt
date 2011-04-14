@@ -5,6 +5,10 @@ Use of GPUs
 - Modules can be assigned fixed resources
 - Modules inside a pipeline must be able to write to and fetch from GPU memory
   only those GPU's to which it has been assigned access to.
+- All memory access modes (e.g page-locked, write-combining, etc) must be supported.
+  The mode may change depending on data size, kernel requirements and underlying device support.
+  Such changes should be transparent as possible, with sensible defaults that can be overridden via
+  the config file and/or an api.
 - Assignment can be dynamic and may change depending on computational requirements.
 - Provision shall be made to allow copying the same memory to multiple GPU's
 - The design shall not restrict the ability of algorithms that require its
